@@ -1,9 +1,15 @@
 function Nav() {
-    return(
-        <nav className="fixed bottom-0 columns-3 h-20 w-full bg-emerald-300 text-center">
-            <a href="#"><img src="#" alt="1" /></a>
-            <a href="#"><img src="#" alt="2" /></a>
-            <a href="#"><img src="#" alt="3" /></a>
+    return (
+        <nav className="fixed bottom-0 h-20 w-full columns-3 bg-emerald-300 text-center">
+            <a href="#" className="hover:bg-emerald-500 h-full block">
+                <img src="#" alt="Tracker" />
+            </a>
+            <a href="#" className="hover:bg-emerald-500 h-full block">
+                <img src="#" alt="Progress" />
+            </a>
+            <a href="#" className="hover:bg-emerald-500 h-full block">
+                <img src="#" alt="Friends" />
+            </a>
         </nav>
     );
 }
