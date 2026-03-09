@@ -1,29 +1,32 @@
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Progress from "./pages/Progress";
+import Tracker from "./pages/Tracker";
+import Friends from "./pages/Friends";
 import './App.css';
-import Nav from './components/Nav';
-import Header from './components/Header';
-import AboutMe from './components/AboutMe';
-import fox from './assets/fox.png';
-import question from './assets/question.jpg';
 
 function App() {
   return (
-    <>
-      {/* <Nav/> */}
-      <Header/>
-      <AboutMe 
-        name="Kazimir" 
-        title="Solo Dev" 
-        blurb="I really like this fox. It's a Tibetan Fox and is perfectly adapted to the Tibetan plateau. It is low to the ground to protect from high winds. It is shaped like that because it has to be aerodynamic." 
-        img={fox} 
-      />
-      <AboutMe 
-        name="Creepster" 
-        title="Imaginary Friend" 
-        blurb="I am Creepster. I am your friend. Let me hug you. I am nice." 
-        img={question}
-      />
-    </>
+    <BrowserRouter>
+      <nav className="fixed bottom-0 h-20 w-full columns-3 bg-emerald-300 text-center">
+        <Link to="/tracker" className="hover:bg-emerald-500 h-full block">
+            <img src="#" alt="Tracker" />
+        </Link>
+        <Link to="/" className="hover:bg-emerald-500 h-full block">
+            <img src="#" alt="Progress" />
+        </Link>
+        <Link to="/friends" className="hover:bg-emerald-500 h-full block">
+            <img src="#" alt="Friends" />
+        </Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Progress />} />
+        <Route path="/tracker" element={<Tracker />} />
+        <Route path="/friends" element={<Friends />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
