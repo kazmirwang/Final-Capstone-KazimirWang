@@ -2,7 +2,10 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Progress from "./pages/Progress";
 import Tracker from "./pages/Tracker";
 import Friends from "./pages/Friends";
-import './App.css';
+import "./App.css";
+import friendsIcon from "./assets/friends.png";
+import progressIcon from "./assets/progress.png";
+import trackerIcon from "./assets/tracker.png";
 
 function App() {
   return (
@@ -12,13 +15,13 @@ function App() {
       <BrowserRouter>
         <nav className="fixed bottom-0 h-20 w-full columns-3 bg-emerald-300 text-center">
           <Link to="/tracker" className="hover:bg-emerald-500 h-full block">
-            <img src="#" alt="Tracker" />
+            <img src={trackerIcon} alt="Tracker" className="max-h-full mx-auto"/>
           </Link>
           <Link to="/" className="hover:bg-emerald-500 h-full block">
-            <img src="#" alt="Progress" />
+            <img src={progressIcon} alt="Progress" className="max-h-full mx-auto"/>
           </Link>
           <Link to="/friends" className="hover:bg-emerald-500 h-full block">
-            <img src="#" alt="Friends" />
+            <img src={friendsIcon} alt="Friends" className="max-h-full mx-auto"/>
           </Link>
         </nav>
 
@@ -33,4 +36,3 @@ function App() {
 }
 
 export default App;
-
