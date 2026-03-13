@@ -1,5 +1,7 @@
+import Header from '../components/Header';
+
 function Friends() {
-    return <h1>Friends Page</h1>;
+    return <Header title="Friends"/>;
   }
   
   export default Friends;

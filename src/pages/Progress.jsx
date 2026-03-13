@@ -1,5 +1,7 @@
+import Header from '../components/Header';
+
 function Progress() {
-    return <h1>Progress Page</h1>;
+    return <Header title="Progress"/>
   }
   
   export default Progress;

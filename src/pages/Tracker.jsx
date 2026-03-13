@@ -1,5 +1,7 @@
+import Header from '../components/Header';
+
 function Tracker() {
-    return <h1>Tracker Page</h1>;
+    return <Header title="Tracker"/>;
   }
   
   export default Tracker;
