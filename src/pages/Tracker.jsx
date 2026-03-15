@@ -6,6 +6,8 @@ function Tracker() {
     <div>
       <Header title="Tracker" />
       <Task title="Calc HW" time="2hr" due="3/16/26" />
+      <Task title="CS 4.6: Hooks & State" time="1hr" due="3/16/26" />
+      <Task title="AP Physics Static Torque" time="2hr" due="3/20/26" />
     </div>
   );
 }
