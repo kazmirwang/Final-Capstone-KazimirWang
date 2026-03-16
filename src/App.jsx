@@ -15,13 +15,25 @@ function App() {
       <BrowserRouter>
         <nav className="fixed bottom-0 h-20 w-full columns-3 bg-emerald-300 text-center">
           <Link to="/tracker" className="hover:bg-emerald-500 h-full block">
-            <img src={trackerIcon} alt="Tracker" className="max-h-full mx-auto"/>
+            <img
+              src={trackerIcon}
+              alt="Tracker"
+              className="max-h-full mx-auto"
+            />
           </Link>
           <Link to="/" className="hover:bg-emerald-500 h-full block">
-            <img src={progressIcon} alt="Progress" className="max-h-full mx-auto"/>
+            <img
+              src={progressIcon}
+              alt="Progress"
+              className="max-h-full mx-auto"
+            />
           </Link>
           <Link to="/friends" className="hover:bg-emerald-500 h-full block">
-            <img src={friendsIcon} alt="Friends" className="max-h-full mx-auto"/>
+            <img
+              src={friendsIcon}
+              alt="Friends"
+              className="max-h-full mx-auto"
+            />
           </Link>
         </nav>
 
