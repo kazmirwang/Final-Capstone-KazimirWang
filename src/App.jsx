@@ -6,6 +6,7 @@ import "./App.css";
 import friendsIcon from "./assets/friends.png";
 import progressIcon from "./assets/progress.png";
 import trackerIcon from "./assets/tracker.png";
+import Add from "./pages/Add";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/" element={<Progress />} />
           <Route path="/tracker" element={<Tracker />} />
           <Route path="/friends" element={<Friends />} />
+          <Route path="/add" element={<Add />} />
         </Routes>
       </BrowserRouter>
     </>
