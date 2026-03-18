@@ -9,9 +9,9 @@ function Task({ title, time, due, note }) {
       onClick={() => setIsOpen(!isOpen)}
     >
       <span className="text-2xl text-mist-800 flex">
-        {title + (note == undefined ? "" : "📝")}
+        {title}
       </span>
-      <span className="text-xl text-mist-500">{time}</span>
+      <span className="text-xl text-mist-500">{time + (note == undefined ? "" : "🗈")}</span>
       <span className="text-xl text-mist-500 float-right">{due}</span>
       {isOpen && note != undefined && (
         <p className="text-mist-500">Notes: {note}</p>
