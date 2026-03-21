@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Task from "../components/Task";
 import AddButton from "../components/AddButton";
 
-function Tracker() {
+export default function Tracker() {
   return (
     <div>
       <Header title="Tracker" />
@@ -21,5 +21,3 @@ function Tracker() {
     </div>
   );
 }
-
-export default Tracker;

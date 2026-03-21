@@ -1,11 +1,9 @@
 import Header from "../components/Header";
 
-function Progress() {
+export default function Progress() {
   return (
     <div>
       <Header title="Progress" />
     </div>
   );
 }
-
-export default Progress;

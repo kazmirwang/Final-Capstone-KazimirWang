@@ -1,4 +1,4 @@
-function Nav() {
+export default function Nav() {
     return (
         <nav className="fixed bottom-0 h-20 w-full columns-3 bg-emerald-300 text-center">
             <a href="#" className="hover:bg-emerald-500 h-full block">
@@ -13,5 +13,3 @@ function Nav() {
         </nav>
     );
 }
-
-export default Nav;

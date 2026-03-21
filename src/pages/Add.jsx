@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import AddForm from "../components/AddForm";
 
-function Add() {
+export default function Add() {
   return (
     <>
       <Header title="Add an Assignment" />
@@ -9,5 +9,3 @@ function Add() {
     </>
   );
 }
-
-export default Add;

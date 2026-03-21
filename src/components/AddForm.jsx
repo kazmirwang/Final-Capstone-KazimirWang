@@ -1,4 +1,4 @@
-function AddForm() {
+export default function AddForm() {
   return (
     <div className="bg-mist-50 mx-3 shadow-sm mb-1 py-1 px-1 text-xl">
       <form action="#">
@@ -52,5 +52,3 @@ function AddForm() {
     </div>
   );
 }
-
-export default AddForm;

@@ -8,7 +8,7 @@ import progressIcon from "./assets/progress.png";
 import trackerIcon from "./assets/tracker.png";
 import Add from "./pages/Add";
 
-function App() {
+export default function App() {
   return (
     <>
       <div className="fixed h-full w-full -z-10 bg-amber-50"></div>
@@ -48,5 +48,3 @@ function App() {
     </>
   );
 }
-
-export default App;

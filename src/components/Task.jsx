@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Task({ title, time, due, note }) {
+export default function Task({ title, time, due, note }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,5 +22,3 @@ function Task({ title, time, due, note }) {
     </div>
   );
 }
-
-export default Task;
