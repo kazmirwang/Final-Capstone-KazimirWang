@@ -21,7 +21,7 @@ export default function AddForm() {
         <br />
         <label htmlFor="subject">Subject: </label>
         <select name="subject" id="subject" className="border rounded-sm mb-1">
-          <option value="choose">choose a subject</option>
+          <option value="choose">Choose</option>
           <option value="ap physics">AP Physics</option>
           <option value="ap lit">AP Lit</option>
           <option value="ap calc bc">AP Calculus BC</option>
@@ -43,10 +43,16 @@ export default function AddForm() {
           <option value="hr">hr</option>
         </select>
         <br />
+        <button
+          type="button"
+          className="border rounded-sm px-1 text-2xl bg-red-300 w-30 inline-block ml-7"
+        >
+          Cancel
+        </button>
         <input
           type="submit"
           value="Create"
-          className="border rounded-sm px-1 text-2xl bg-emerald-100 w-30"
+          className="border rounded-sm px-1 text-2xl bg-emerald-100 w-30 float-right mr-7"
         />
       </form>
     </div>
