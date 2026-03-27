@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Task from "../components/Task";
 import AddButton from "../components/AddButton";
+import { DataProvider, DataContext } from "../DataProvider";
+import { useContext } from "react";
 
 export default function Tracker() {
+  const { tasks } = useContext(DataContext);
+
   return (
     <div>
       <Header title="Tracker" />
@@ -18,6 +22,11 @@ export default function Tracker() {
         due="3/20/26"
         note="prob not due until monday"
       />
+      <DataProvider>
+        {tasks.map((task) => {
+          <Task title={task.title} time={task.time} due={task.due} />;
+        })}
+      </DataProvider>
     </div>
   );
 }
