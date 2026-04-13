@@ -6,8 +6,7 @@ import { DataProvider, DataContext } from "../DataProvider";
 import { useContext } from "react";
 
 export default function Tracker() {
-  const { tasks } = useContext(DataContext);
-
+  /*const { tasks, loading } = useContext(DataContext);
   return (
     <div>
       <Header title="Tracker" />
@@ -22,11 +21,16 @@ export default function Tracker() {
         due="3/20/26"
         note="prob not due until monday"
       />
-      <DataProvider>
-        {tasks.map((task) => {
-          <Task title={task.title} time={task.time} due={task.due} />;
-        })}
-      </DataProvider>
+      {loading ? (
+        <p>Content still loading</p>
+      ) : (
+        <DataProvider>
+          {tasks.map((task) => {
+            <Task title={task.title} time={task.time} due={task.due} />;
+          })}
+        </DataProvider>
+      )}
     </div>
-  );
+  );*/
+  return <DataProvider> </DataProvider>;
 }
