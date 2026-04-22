@@ -10,9 +10,9 @@ export default function TaskList() {
   }
   return (
     <div>
-      {tasks[0] != undefined? tasks.map((task) => {
+    {tasks[0] != undefined? <Task title={tasks[0].title} time={tasks[0].time} due={tasks[0].due} /> /*tasks.map((task) => {
         <Task title={task.title} time={task.time} due={task.due} />;
-      }) : "hello"}
+      })*/ : <p>hello</p>}
     </div>
   );
 }
