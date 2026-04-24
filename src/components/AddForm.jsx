@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function AddForm() {
   return (
     <div className="bg-mist-50 mx-3 shadow-sm mb-1 py-1 px-1 text-xl">
-      <form action="#">
+      <form action="#" onSubmit="#">
         <label htmlFor="name">Name: </label>
         <input
           type="text"
@@ -43,12 +45,14 @@ export default function AddForm() {
           <option value="hr">hr</option>
         </select>
         <br />
-        <button
-          type="button"
-          className="border rounded-sm px-1 text-2xl bg-red-300 w-30 inline-block ml-7"
-        >
-          Cancel
-        </button>
+        <Link to="/tracker">
+          <button
+            type="button"
+            className="border rounded-sm px-1 text-2xl bg-red-300 w-30 inline-block ml-7"
+          >
+            Cancel
+          </button>
+        </Link>
         <input
           type="submit"
           value="Create"

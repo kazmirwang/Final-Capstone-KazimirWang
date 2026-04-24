@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Task({ title, time, due, note }) {
+export default function Task({ title, time, due, note, subject }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -11,7 +11,8 @@ export default function Task({ title, time, due, note }) {
       }
       onClick={() => setIsOpen(!isOpen)}
     >
-      <span className="text-2xl text-mist-800 flex">{title}</span>
+      <h1 className="text-2xl text-mist-800 flex">{title}</h1>
+      <p className="text-lg text-mist-400">{subject}</p>
       <span className="text-xl text-mist-500">
         {time + (note == undefined ? "" : " 🗈")}
       </span>

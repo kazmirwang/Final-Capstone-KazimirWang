@@ -4,15 +4,21 @@ import Task from "./Task";
 
 export default function TaskList() {
   const { tasks, loading } = useContext(DataContext);
+  let taskList = [];
   console.log(tasks, loading);
-  if (tasks[0] != undefined) {
-    console.log(tasks[0].title, tasks[0].time, tasks[0].due);
+  if (!loading) {
+    tasks.forEach((task) => {
+      taskList.push(
+        <Task
+          key={task.id}
+          title={task.title}
+          time={task.time}
+          due={task.due}
+          note={task.note}
+          subject={task.subject}
+        />,
+      );
+    });
   }
-  return (
-    <div>
-    {tasks[0] != undefined? <Task title={tasks[0].title} time={tasks[0].time} due={tasks[0].due} /> /*tasks.map((task) => {
-        <Task title={task.title} time={task.time} due={task.due} />;
-      })*/ : <p>hello</p>}
-    </div>
-  );
+  return <div>{loading ? <p>Data Loading...</p> : taskList}</div>;
 }

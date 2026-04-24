@@ -12,14 +12,6 @@ export default function Tracker() {
       <Link to="/add">
         <AddButton />
       </Link>
-      <Task title="Calc HW" time="2hr" due="3/16/26" note="need to make up" />
-      <Task title="CS 4.6: Hooks & State" time="1hr" due="3/16/26" />
-      <Task
-        title="AP Physics Static Torque"
-        time="2hr"
-        due="3/20/26"
-        note="prob not due until monday"
-      />
       <DataProvider>
         <TaskList />
       </DataProvider>
