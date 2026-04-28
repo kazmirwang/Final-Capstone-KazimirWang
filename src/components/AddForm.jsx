@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../DataProvider";
 
 export default function AddForm() {
+  const navigate = useNavigate();
+
   async function addTask(formData) {
     "use server";
     // eslint-disable-next-line no-unused-vars
@@ -14,6 +16,8 @@ export default function AddForm() {
         subject: formData.get("subject"),
       },
     ]);
+    console.log("updated");
+    navigate("/tracker");
   }
   return (
     <div className="bg-mist-50 mx-3 shadow-sm mb-1 py-1 px-1 text-xl">

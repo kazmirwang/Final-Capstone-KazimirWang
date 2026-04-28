@@ -1,8 +1,17 @@
 import { useState } from "react";
+import { supabase } from "../DataProvider";
+import { Link, useNavigate } from "react-router-dom";
 
-export default function Task({ title, time, due, note, subject }) {
+export default function Task({ title, time, due, note, subject, id }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navigate = useNavigate();
+
+  async function completeTask() {
+    // eslint-disable-next-line no-unused-vars
+    const response = await supabase.from("tasks").delete().eq("id", id);
+    navigate(0);
+  }
   return (
     <div
       className={
@@ -12,7 +21,12 @@ export default function Task({ title, time, due, note, subject }) {
       onClick={() => setIsOpen(!isOpen)}
     >
       <h1 className="text-2xl text-mist-800 flex">{title}</h1>
-      <p className="text-lg text-mist-400">{subject}</p>
+      <p className="text-lg text-mist-400">
+        {subject}
+        <Link to="/tracker" onClick={completeTask} className="float-right">
+          ✅
+        </Link>
+      </p>
       <span className="text-xl text-mist-500">
         {time + (note == undefined ? "" : " 🗈")}
       </span>

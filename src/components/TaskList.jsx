@@ -4,7 +4,9 @@ import Task from "./Task";
 
 export default function TaskList() {
   const { tasks, loading } = useContext(DataContext);
+
   let taskList = [];
+
   console.log(tasks, loading);
   if (!loading) {
     tasks.forEach((task) => {
@@ -16,6 +18,7 @@ export default function TaskList() {
           due={task.due}
           note={task.note}
           subject={task.subject}
+          id={task.id}
         />,
       );
     });
