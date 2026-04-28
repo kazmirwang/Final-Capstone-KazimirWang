@@ -1,32 +1,46 @@
 import { Link } from "react-router-dom";
+import { supabase } from "../DataProvider";
 
 export default function AddForm() {
+  async function addTask(formData) {
+    "use server";
+    // eslint-disable-next-line no-unused-vars
+    const { data, error } = await supabase.from("tasks").insert([
+      {
+        title: formData.get("title"),
+        time: formData.get("time") + formData.get("timeUnit"),
+        due: formData.get("due"),
+        note: formData.get("note"),
+        subject: formData.get("subject"),
+      },
+    ]);
+  }
   return (
     <div className="bg-mist-50 mx-3 shadow-sm mb-1 py-1 px-1 text-xl">
-      <form action="#" onSubmit="#">
-        <label htmlFor="name">Name: </label>
+      <form action={addTask}>
+        <label htmlFor="title">Name: </label>
         <input
           type="text"
-          name="name"
-          id="name"
+          name="title"
+          id="title"
           className="border rounded-sm mb-1"
           required
         />
         <br />
-        <label htmlFor="date">Due Date: </label>
+        <label htmlFor="due">Due Date: </label>
         <input
           type="date"
-          name="date"
-          id="date"
+          name="due"
+          id="due"
           className="border rounded-sm mb-1"
         />
         <br />
         <label htmlFor="subject">Subject: </label>
         <select name="subject" id="subject" className="border rounded-sm mb-1">
           <option value="choose">Choose</option>
-          <option value="ap physics">AP Physics</option>
-          <option value="ap lit">AP Lit</option>
-          <option value="ap calc bc">AP Calculus BC</option>
+          <option value="AP Physics">AP Physics</option>
+          <option value="AP Literature">AP Lit</option>
+          <option value="AP Calculus BC">AP Calculus BC</option>
         </select>
         <br />
         <label htmlFor="time">Time to Complete: </label>
@@ -44,6 +58,14 @@ export default function AddForm() {
           <option value="min">min</option>
           <option value="hr">hr</option>
         </select>
+        <br />
+        <label htmlFor="note">Note: </label>
+        <input
+          type="text"
+          name="note"
+          id="note"
+          className="border rounded-sm mb-1"
+        />
         <br />
         <Link to="/tracker">
           <button
