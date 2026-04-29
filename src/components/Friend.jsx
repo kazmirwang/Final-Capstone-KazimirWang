@@ -7,6 +7,7 @@ export default function Friend({ name, pfp, progress, workingOn }) {
         src={pfp}
         alt={name + " pfp"}
         className="inline-block border rounded-[50%]"
+        width={30}
       />
       <span className="text-2xl"> {name} </span>
       <ProgressBar

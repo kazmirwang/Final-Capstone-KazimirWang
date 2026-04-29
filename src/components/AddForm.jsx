@@ -17,7 +17,7 @@ export default function AddForm() {
       },
     ]);
     console.log("updated");
-    navigate("/tracker");
+    navigate("/");
   }
   return (
     <div className="bg-mist-50 mx-3 shadow-sm mb-1 py-1 px-1 text-xl">
@@ -71,7 +71,7 @@ export default function AddForm() {
           className="border rounded-sm mb-1"
         />
         <br />
-        <Link to="/tracker">
+        <Link to="/">
           <button
             type="button"
             className="border rounded-sm px-1 text-2xl bg-red-300 w-30 inline-block ml-7"

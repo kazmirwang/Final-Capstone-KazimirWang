@@ -23,7 +23,7 @@ export default function Task({ title, time, due, note, subject, id }) {
       <h1 className="text-2xl text-mist-800 flex">{title}</h1>
       <p className="text-lg text-mist-400">
         {subject}
-        <Link to="/tracker" onClick={completeTask} className="float-right">
+        <Link to="/" onClick={completeTask} className="float-right">
           ✅
         </Link>
       </p>

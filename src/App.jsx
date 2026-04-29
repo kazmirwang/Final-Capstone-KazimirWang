@@ -13,16 +13,16 @@ export default function App() {
     <>
       <div className="fixed h-full w-full -z-10 bg-amber-50"></div>
       <div className="fixed h-1 w-full bg-amber-50"></div>
-      <BrowserRouter basename="/Final-Capstone-KazimirWang">
+      <BrowserRouter basename="/Final-Capstone-KazimirWang/">
         <nav className="fixed bottom-0 h-20 w-full columns-3 bg-emerald-300 text-center">
-          <Link to="/tracker" className="hover:bg-emerald-500 h-full block">
+          <Link to="/" className="hover:bg-emerald-500 h-full block">
             <img
               src={trackerIcon}
               alt="Tracker"
               className="max-h-full mx-auto"
             />
           </Link>
-          <Link to="/" className="hover:bg-emerald-500 h-full block">
+          <Link to="/progress" className="hover:bg-emerald-500 h-full block">
             <img
               src={progressIcon}
               alt="Progress"
@@ -39,8 +39,8 @@ export default function App() {
         </nav>
 
         <Routes>
-          <Route path="/" element={<Progress />} />
-          <Route path="/tracker" element={<Tracker />} />
+          <Route path="/progress" element={<Progress />} />
+          <Route path="/" element={<Tracker />} />
           <Route path="/friends" element={<Friends />} />
           <Route path="/add" element={<Add />} />
         </Routes>
