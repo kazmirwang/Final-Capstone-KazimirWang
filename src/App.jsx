@@ -13,8 +13,8 @@ export default function App() {
   return (
     <>
       <div className="fixed h-full w-full -z-10 bg-amber-50"></div>
+      <div className="h-1 w-full bg-amber-50"></div>
       <Title />
-      <div className="fixed h-1 w-full bg-amber-50"></div>
       <BrowserRouter basename="/Final-Capstone-KazimirWang/">
         <nav className="fixed bottom-0 h-20 w-full columns-3 bg-emerald-300 text-center">
           <Link to="/" className="hover:bg-emerald-500 h-full block">
