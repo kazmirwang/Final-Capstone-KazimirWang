@@ -28,7 +28,7 @@ export default function Task({ title, time, due, note, subject, id }) {
         </Link>
       </p>
       <span className="text-xl text-mist-500">
-        {time + (note == undefined ? "" : " 🗒️")}
+        {time + (note == undefined ? "" : " 📓")}
       </span>
       <span className="text-xl text-mist-500 float-right">{due}</span>
       {isOpen && note != undefined && (
