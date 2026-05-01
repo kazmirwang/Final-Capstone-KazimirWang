@@ -71,19 +71,19 @@ export default function AddForm() {
           className="border rounded-sm mb-1"
         />
         <br />
+        <input
+          type="submit"
+          value="Create"
+          className="border rounded-sm px-1 text-2xl bg-emerald-100 w-30 inline-block mr-7"
+        />
         <Link to="/">
           <button
             type="button"
-            className="border rounded-sm px-1 text-2xl bg-red-300 w-30 inline-block ml-7"
+            className="border rounded-sm px-1 text-2xl bg-red-300 w-30 float-right ml-7"
           >
             Cancel
           </button>
         </Link>
-        <input
-          type="submit"
-          value="Create"
-          className="border rounded-sm px-1 text-2xl bg-emerald-100 w-30 float-right mr-7"
-        />
       </form>
     </div>
   );
