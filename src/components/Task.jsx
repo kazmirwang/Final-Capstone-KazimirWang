@@ -24,13 +24,13 @@ export default function Task({ title, time, due, note, subject, id }) {
       <p className="text-lg text-mist-400">
         {subject}
         <Link to="/" onClick={completeTask} className="float-right">
-          ✅
+          <span className="text-black rounded bg-emerald-400 p-1">Complete?</span>
         </Link>
       </p>
       <span className="text-xl text-mist-500">
         {time + (note == undefined ? "" : " 📓")}
       </span>
-      <span className="text-xl text-mist-500 float-right">{due}</span>
+      <span className="text-xl text-mist-500 float-right">Due: {due}</span>
       {isOpen && note != undefined && (
         <p className="text-mist-500">Notes: {note}</p>
       )}
